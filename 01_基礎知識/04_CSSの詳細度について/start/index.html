@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="parent">
+      <span class="cls">こんにちは！ 日本！</span>
+      <span>こんにちは！ 日本！</span>
+      <span>こんにちは！ 日本！</span>
+      <!-- 子要素のタグを指定して装飾すると子タグ > 親要素となるので子タグに指定した装飾が適用される -->
+      <span id="first" class="cls">こんにちは！ 日本！</span>
+    </div>
+    <!-- 親要素にデザインを設定するとその下の子要素、孫要素も同じデザインが適用される -->
+    <!-- クラス指定した装飾は クラス > 子タグ となるのでクラス装飾が適用される -->
+    <!-- なるべく絞ったセレクタの方が詳細度が高いとみなされる -->
+    <!-- idは一つの要素にしか指定できない -->
+    <!-- 親要素クラス(半スペ)子タグとcssで指定するとidの次に詳細度が高くなる。 -->
+    <!-- スタイルは下に書かれた(後から記述された)プロパティの方が優先される -->
+    <!-- 意図しないスタイルが適用された時は検証機能で確認すること -->
+    <style></style>
+  </body>
+</html>

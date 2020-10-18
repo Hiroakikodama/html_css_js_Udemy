@@ -1,0 +1,32 @@
+.first {
+        display: inline-block;
+        /* ブロック要素の中央揃え*/
+        margin: 0 auto;
+        width: 100px;
+        height: 400px;
+        background-color: magenta;
+        }
+#first {
+    display: inline-block;
+    /* ブロック要素の中央揃え*/
+    margin: 0 auto;
+    width: 100px;
+    height: 400px;
+    background-color: gray;
+    }
+#second {
+    display: inline-block;
+    /* ブロック要素の中央揃え*/
+    margin: 0 auto;
+    width: 100px;
+    height: 400px;
+    background-color: gray;
+    }
+.cls {
+    display: inline-block;
+    /* ブロック要素の中央揃え*/
+    margin: 0 auto;
+    width: 100px;
+    height: 400px;
+    background-color: magenta;
+    }

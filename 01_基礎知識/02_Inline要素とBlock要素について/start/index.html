@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>こんにちは！日本！</span><!-- インライン要素　横幅と縦幅を指定することはできない -->
+    <span>こんにちは！日本！</span>
+    <span>こんにちは！日本！</span>
+    <span>こんにちは！日本！</span>
+    <div>こんにちは！日本！</div><!-- ブロック要素　横幅と縦幅を指定できる -->
+    <!-- インライン要素とブロック要素はスタイル変更の仕様が違う。
+    display: block;の中央揃えはmargin: 0 auto;
+    display: inline;の中央揃えはtext-aline: center;
+    見分け方としては並べた時に横に並べばインライン要素
+    並べた時に縦に並べばブロック要素 -->
+    <style>
+
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 400px;
+            background-color: magenta;
+        }
+    </style>
+</body>
+
+</html>

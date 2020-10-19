@@ -11,6 +11,11 @@
   <body>
     <h2>positionとz-indexについて学ぼう</h2>
     <section id="container">
+      <!-- 子要素のabsoluteは親要素のrelativeを基準に絶対位置を取る。親要素にrelativeがないとtopとleft等の指定に従う -->
+      <!-- positionがstatic以外に設定されている場合、z-indexが有効になる。z-indexが大きい方が前面に表示される -->
+      <!-- positionをstatic以外に設定し、z-indexを設定した場合、ローカルスタックコンテキストを生成する。z-index: auto;はローカルスタックコンテキストを生成しない。 -->
+      <!-- position: absoluteは親要素に対して絶対位置を取るが、fixedにするとページ全体に対して絶対位置を取る。 -->
+      <!-- div-4にposition: sticky、top: 30pxを設定するとdiv-4が上から30pxの位置になったらスクロールに追随するようになる。親要素の中で可動するようになる。 -->
       <div class="div-1">div 1</div>
       <div class="div-2">div 2</div>
       <div class="div-3">

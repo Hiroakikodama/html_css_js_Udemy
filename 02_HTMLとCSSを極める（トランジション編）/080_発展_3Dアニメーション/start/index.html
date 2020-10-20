@@ -11,7 +11,11 @@
 
 <body>
     <div id="container">
-        <button class="btn slide-bg">Button</button>
+        <button class="btn cover-3d">
+            <span>Button</span>
+        </button>
+        <!-- transform-style: preserve-3d;で子要素に3Dアニメーションを適用できる -->
+        <!-- perspective: 300px;で奥行きを演出できる。perspective-originと組み合わせることでより立体感を出せる。perspective-originは立方体をどの側面から見るかを決める -->
     </div>
 </body>
 

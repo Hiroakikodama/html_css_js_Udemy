@@ -16,7 +16,42 @@ $cBlack: black;
     cursor: pointer;
 
     &.cubic {
-      /** スタイルをここに追加。*/
+      & span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $cBlack;
+        line-height: 48px;
+        // 親要素は50pxだけど、borderが上1px、下1pxあるので、50-2＝48pxと指定する。
+        text-align: center;
+        transition: all 0.3s;
+      }
+
+      & .hovering {
+        background-color: $cBlack;
+        color: $cWhite;
+        transform: rotateX(90deg);
+        transform-origin: center center -25px;
+        // transform-originの第3引数(上記の-25px)はどこを軸に回転するかの指定。親要素が50pxなので、その中間値を取るとちょうどいい感じに見える。
+      }
+
+      & .default {
+        background-color: $cWhite;
+        color: $cBlack;
+        transform: rotateX(0);
+        transform-origin: center center -25px;
+      }
+
+      &:hover {
+        & .hovering {
+          transform: rotateX(0);
+        }
+        & .default {
+          transform: rotateX(-90deg);
+        }
+      }
     }
   }
 }

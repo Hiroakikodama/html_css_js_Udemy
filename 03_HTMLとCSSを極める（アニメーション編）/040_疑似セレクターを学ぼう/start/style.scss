@@ -1,0 +1,62 @@
+a {
+  color: orange;
+
+  &:visited {
+    color: blue;
+  }
+
+  &:hover {
+    color: red;
+  }
+
+  &:focus {
+    color: green;
+  }
+
+  &:active {
+    color: purple;
+  }
+}
+
+div {
+  & span {
+    color: olive;
+
+    // &:nth-of-type(1) {
+    //   color: purple;
+    // }
+    // &:nth-of-type(2) {
+    //   color: green;
+    // }
+    // &:nth-of-type(3) {
+    //   color: blue;
+    // }
+
+    &:not(.cls) {
+      color: purple;
+    }
+    // .clsがふられていない要素に関してスタイルを適用する。
+    // .clsがふられた要素は.spanに設定されたcolor: olive;が適用される。
+
+    // &:first-child {
+    //   color: chartreuse;
+    // }
+
+    // &:last-child {
+    //   color: cadetblue;
+    // }
+
+    // &:first-of-type {
+    //   color: coral;
+    // }
+
+    // &:last-of-type {
+    //   color: darkblue;
+    // }
+
+    // 同じような要素が並ぶ場合は、nth-childを使って要素を特定することが多い。
+    // odd=奇数、even=偶数
+    // nth-childは親要素の中の子要素を上から順に見て、スタイルを適用する。
+    // nth-of-typeは親要素の中の、指定された子要素(spanとか)も考慮して、子要素の中のspanの一番目はこのスタイル、というようにスタイルを適用する。
+  }
+}

@@ -6,16 +6,20 @@
 
 .child {
   background-color: orange;
-  width: 100px;
-  height: 100px;
+  // width: 100px;
+  // height: 100px;
   font-weight: 600;
   flex-grow: 1;
-  flex-basis: 300px;
 }
 .child.v1 {
+  flex-basis: 300px;
+  // まずこのflex-basisの大きさを確保してからflex-growを取るように動く。
   flex-shrink: 0;
+  // shrink=縮むという意味。縮む余地0＝縮まないということでflex-shrink:0;を設定すると優先してflex-basisを確保する。
 }
 .child.v2 {
+  // width: 200px;
+  // height: 200px;
   background-color: palevioletred;
   flex-grow: 2;
 }
@@ -33,14 +37,14 @@
 //   letter-spacing: -6px;
 // }
 // .child {
-//     display: inline-block;
+//   display: inline-block;
 // }
 
 /* ブロック要素を中央揃え */
 // .parent {
 // }
 // .child {
-//     margin: 0 auto;
+//   margin: 0 auto;
 // }
 
 /**
@@ -55,9 +59,13 @@
 //   left: 50%;
 //   transform: translate(-50%, -50%);
 // }
+// 重ねてレイアウトをとりたい時に、position: absolute;を使う。要素の上に要素を配置できる。
 
-// .parent {
-//   display: flex;
-//   flex-direction: row-reverse;
-//   justify-content: center;
-// }
+.parent {
+  display: flex;
+  flex-direction: row-reverse;
+  // flex-direction: row;
+  justify-content: center;
+  // align-items: flex-end;
+  // flex-wrap: wrap;
+}

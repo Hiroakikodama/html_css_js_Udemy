@@ -10,14 +10,14 @@ $cBlack: black;
     background-color: $cBlack;
     border-radius: 50%;
     animation: sk-bouncedelay 1.4s infinite;
+  }
 
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        animation-delay: -0.32s / $i;
-        // background-image: url('/images/image#{$i}.png');文字列の中に変数を使いたい場合は、#{}で変数を囲う必要がある。
-      }
-    }
-    // @for $i from 1 to 2 {}だとtoの後の数字（今回は2）は含まない。throughは後の数字も含む。
+  & .bounce1 {
+    animation-delay: -0.32s;
+  }
+
+  & .bounce2 {
+    animation-delay: -0.16s;
   }
 }
 
@@ -35,3 +35,4 @@ $cBlack: black;
     transform: scale(0);
   }
 }
+// keyframesは基本的に0％〜100％のアニメーションの状態を記述する。0％にopacity: 0;を記述し、100％にopacity: 1;を設定すると、アニメーションが始まるまでは透明で、アニメーションが終了する1.4秒後にはopacity: 1;が適用される。

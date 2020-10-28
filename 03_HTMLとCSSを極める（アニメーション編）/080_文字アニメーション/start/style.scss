@@ -1,7 +1,7 @@
 @import "mixin";
 
 html {
-  font-family: "Teko", sans-serif;
+  font-family: "Syne Tactile", cursive;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: White;
+  color: white;
   opacity: 0;
   font-size: 2em;
 
@@ -32,7 +32,7 @@ body {
       @include animation(
         $name: kf-animate-chars,
         $duration: 0.5s,
-        $timing-function: cubic-bexier(0.39, 1.57, 0.58, 1),
+        $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
         $fill-mode: both
       );
 
@@ -42,7 +42,6 @@ body {
         }
       }
     }
-    // 半角スペースを開けているので子要素のクラスを指定している。
   }
 }
 
@@ -51,8 +50,11 @@ body {
     opacity: 0;
     transform: translateY(-50%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+// transformはinline-blockかblock要素でなければ適用できない

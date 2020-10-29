@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="images/400x250.png" srcset="images/1100x550.png, images/800x250.png, images/400x250px">
+  <!-- altは画像の説明文。今回は削除してる。 -->
+  <div class="bg-image">
+    <picture>
+      <source media="(min-width: 960px)" srcset="images/1100x550.png">
+      <source media="(min-width: 480px)" srcset="images/800x250.png">
+      <img src="images/400x250.png" alt="test">
+    </picture>
+    <!-- 画面の横幅によって表示したい画像を変えたい時はpictuerタグを使う。 -->
+    <style>
+      /* img {
+        height: 500px;
+        width: 300px;
+        object-fit: cover; */
+        /* imgタグは背景画像にあまり適さない。アスペクト比がおかしくなるので。 */
+        /* object-fit: cover;を使えばbacground-imageのbackground-sizeと同じようにスタイルを適用できる。 */
+      }
+      .bg-image {
+        background-color: black;
+        height: 500px;
+        /* width: 300px; */
+        background-image: url(images/400x250.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      @media screen  and (min-width: 600px){
+        .bg-image {
+          background-image: url(images/800x250.png);
+        }
+      }
+    </style>
+  </div>
+</body>
+</html>

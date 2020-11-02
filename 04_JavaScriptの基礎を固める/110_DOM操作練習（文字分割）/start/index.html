@@ -13,8 +13,10 @@
 <body>
     <div id="container">
         <div class="animate-title inview">
-            ANIMATION
+            PLAY ANIMATION
         </div>
+        <!-- HTMLはスペースを無視するようになっている。その為、PLAYとANIMATIONの間のスペースは無いものとして判断される。 -->
+        <!-- スペースを認識してもらいたい場合は、&nbsp;と入れると半角スペースだと判断され、反映される。 -->
         <button onclick="document.querySelector('.animate-title').classList.toggle('inview');">Animation</button>
     </div>
     <script src="main.js"></script>
